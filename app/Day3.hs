@@ -1,8 +1,7 @@
-module Main (main) where
+module Day3 (main) where
 import Data.Char (ord, isUpper)
 import Data.List (nub)
 import Data.Function
-import Debug.Trace
 
 main :: IO ()
 main = do
@@ -32,11 +31,6 @@ commonChars :: [String] -> String
 commonChars (string : strings) =
   string & filter (\c -> and $ map (elem c) strings)
   
-    
---  let (first : rest) = strings
---      existInAll = \x -> \l 
---  in
-     
 
 group :: Int -> [String] -> [[String]]
 group _ [] = []
